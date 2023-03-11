@@ -1,0 +1,59 @@
+.header, .header > div { display: flex; align-items: center; padding: 5px; }
+.header { font-style: italic; flex-wrap: wrap; justify-content: space-evenly; }
+
+/*#region ====================== DV LOGO =========== */
+.dvlogo { width: 23em; gap: 12px; }
+
+.dvlogo svg > :is(path, text) {
+  font-weight: bold; fill: white; stroke-linecap: round;
+  stroke-linejoin: round; paint-order: stroke;
+}
+
+.dimg {
+  height: min(calc(1vw + 86px), 110px);
+  width: min(calc(1vw + 86px), 110px);
+  margin-left: 6px;
+  display: flex; border-radius: 50%;
+  background: radial-gradient(at 40% 35%, white, black 70%);
+  border: 2px solid var(--cor); box-shadow: 0 0 12px white;
+}
+
+.svimg { width: 93%; height: 89%; margin: auto; margin-top: 6px; }
+
+.svimg > polygon {
+  fill: rgb(100, 0, 0); opacity: .3; stroke: white; stroke-width: 2px;
+}
+
+.svimg > .pthtxa { fill: var(--corb); stroke: white; stroke-width: 3px; }
+.svimg > .pthtxb { stroke: var(--corb); stroke-width: 9px; opacity: .8;}
+
+/* --------------------------------------------- */
+.svtit { font-size: 2.4em; width: 65%; height: 70px; }
+
+.svtit > text {
+  transform: translate(.5%, 70%);
+  stroke: red;
+  stroke-width:4px;
+  stroke-dasharray: 190;
+  stroke-dashoffset: 0;
+  /* animation: fxstroke 3s 2; */
+}
+
+/* #endregion */
+
+.dvuser { flex: .9 .5 400px; flex-direction: column; }
+.dvuser > span { color: inherit; font-size: 1.7em; }
+
+/*#region ====================== CORES =========== */
+.svtit > text, .header span { text-shadow: 2px 2px 4px red; }
+
+/* #endregion */
+
+@keyframes ofdist {  0%, 100% { offset-distance: 0%; } 50% { offset-distance: 100%; }   }
+@keyframes fxstroke {  0%, 100% { stroke-dashoffset: 1; } 50% { stroke-dashoffset: 170; }   }
+/*#region =========================================== media screen =============== */
+
+@media screen and (max-width: 600px) {
+
+}
+/* #endregion */
