@@ -6,7 +6,10 @@ export default function Footer() {
 
   return (
     <footer className={css.footer}>
-      <p className={css.pright}><b>&copy; 2023 Next for All - Features Básicas</b> - <span role="doc-credits" aria-label="criador do site"> Criado por Paulo Osawa</span></p>
+      <p className={css.pright}>
+        <span><b>&copy; 2023 Next for All - Features Básicas</b> </span>
+        <span role="doc-credits" aria-label="criador do site"> Criado por Paulo Osawa</span>
+      </p>
       <div className={css.dvfooter}>
         <div className={css.dnext}>
           <a href="https://nextjs.org/" target="_blank" rel="noopener noreferrer">

@@ -2,9 +2,13 @@
 .footer h2{ font-weight: 400; }
 
 .pright{
-  width: 100%; line-height: 1.3em; padding:0 0 .3em 0;
+  width: 100%; line-height: 1.3em; padding:0 0 .4em 0;
+  display: flex; justify-content: center; flex-wrap: wrap; gap: .2em;
   margin-bottom: .6vw; border-bottom: 2px solid white;
 }
+.pright span{ white-space: nowrap; }
+
+.pright span:last-child::before{ content: '- '; }
 
 .dvfooter, .dvfooter > div, .dvfooter a { display: flex; align-items: center; }
 
@@ -25,6 +29,8 @@
 /*#region =========================================== media screen =============== */
 
 @media screen and (max-width: 600px) {
+  .pright span{ width: 80%; }
+  .pright span:last-child::before{ content: none; }
   .dvfooter { flex-wrap: wrap; }
   .dvfooter > div { width: 90%; }
   .dvfooter > div:not(:first-child) {  border-top: 1px solid var(--cor); }
